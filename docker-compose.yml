@@ -1,0 +1,28 @@
+name: lenti-studio
+
+services:
+  studio:
+    build:
+      context: .
+      target: app
+    image: lenti-studio
+    ports:
+      - "127.0.0.1:${PORT:-8080}:8000"
+    environment:
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-25}
+      MAX_IMAGE_SIDE: ${MAX_IMAGE_SIDE:-3000}
+      MAX_LIBRARY: ${MAX_LIBRARY:-200}
+      MAX_RENDER_PIXELS: ${MAX_RENDER_PIXELS:-160000000}
+      SESSION_TTL_HOURS: ${SESSION_TTL_HOURS:-24}
+      RENDER_CONCURRENCY: ${RENDER_CONCURRENCY:-2}
+    volumes:
+      - sessions:/data
+    deploy:
+      resources:
+        limits:
+          cpus: "${CPUS:-2}"
+          memory: ${MEMORY:-2g}
+    restart: unless-stopped
+
+volumes:
+  sessions:

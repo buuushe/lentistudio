@@ -1,0 +1,387 @@
+{
+  "common": {
+    "appName": "Lenti Studio"
+  },
+  "header": {
+    "toggleTheme": "Toggle theme",
+    "siteHint": "The hosted studio and community gallery"
+  },
+  "studio": {
+    "upload": {
+      "add": "Add photos",
+      "addMore": "Add more",
+      "hint": "JPG, PNG, TIFF, WebP or BMP. Drop the whole roll at once, frames are grouped into sets of {n} for animations. Frames are kept for 24 hours and then deleted. Several sets can play in one animation.",
+      "noImages": "No images were selected.",
+      "uploading": "Uploading… {done} / {n}",
+      "done": "{n} photo in the library · {width}×{height} | {n} photos in the library · {width}×{height}",
+      "failed": "Upload failed: {message}",
+      "restored": "Session restored · {n} photos",
+      "expired": "The previous session has expired, upload the frames again",
+      "dropHere": "Drop the scans of your roll here",
+      "scansDone": "{n} scan uploaded | {n} scans uploaded",
+      "restoredScans": "Session restored · {n} scans",
+      "scansHint": "JPG, PNG, TIFF, WebP or BMP. Drop the scans of the whole roll at once: each scan holds several frames and is cut into single frames before the studio opens. Files are kept for 24 hours and then deleted.",
+      "shrinking": "Compressing… {done} / {n}",
+      "skippedLarge": "{n} file skipped: larger than {limitMb} MB and not compressible in the browser | {n} files skipped: larger than {limitMb} MB and not compressible in the browser",
+      "allTooLarge": "Every file is larger than {limitMb} MB and cannot be compressed in the browser. Export them as JPEG",
+      "notice": {
+        "title": "Some files are larger than {limitMb} MB",
+        "body": "{n} of {total} files are heavier than an Instagram animation needs, the largest is {largestMb} MB. They will be gently downsized to {side} px on the long side and repacked as JPEG; the picture in the animation stays the same.",
+        "tiff": "TIFF cannot be compressed in the browser: TIFF files above {hardMb} MB are skipped, export them as JPEG.",
+        "confirm": "Compress and upload",
+        "cancel": "Cancel"
+      }
+    },
+    "scanMode": {
+      "title": "Frames on each scan",
+      "one": "One frame",
+      "two": "Two frames",
+      "three": "Three frames",
+      "four": "Four frames",
+      "oneHint": "Every file is a single frame of the roll",
+      "twoHint": "Every scan holds two frames side by side; they are cut into frames first",
+      "threeHint": "Every scan holds three frames side by side; they are cut into frames first",
+      "fourHint": "Every scan holds a whole shot of four frames; they are cut into frames first"
+    },
+    "cut": {
+      "title": "Cut the scans into frames",
+      "hint": "Drag inside the frame to move all cells together, pull a corner or an edge to resize them, drag the strip between two cells to change the gap. All cells share one size, so the frames line up without extra shifts.",
+      "axis": "Layout",
+      "axisX": "Side by side",
+      "axisY": "Stacked",
+      "gap": "Gap",
+      "frameSize": "Each frame ≈ {w} × {h} px",
+      "scanOf": "Scan {n} of {total}",
+      "cut": "Cut {scans} scans into {frames} frames",
+      "cutting": "Cutting the scans…",
+      "done": "{n} frames cut from the scans",
+      "failed": "Could not cut the scans: {message}",
+      "back": "Back to the studio",
+      "recut": "Cut the scans again",
+      "canvasLabel": "Scan {n}: arrows move the frames by one pixel, Shift by ten",
+      "pick": "Show scan {n}",
+      "scope": "Frame",
+      "scopeShared": "One for all scans",
+      "scopeEach": "Own for each scan",
+      "scopeSharedHint": "The same cut is applied to every scan, check the others below.",
+      "scopeEachHint": "Each scan keeps its own frame. Pick a scan below and adjust it.",
+      "applyAll": "Use this frame for all scans"
+    },
+    "library": {
+      "title": "Library",
+      "info": "Library: {n}"
+    },
+    "sets": {
+      "title": "Sets",
+      "tab": "Set {n}",
+      "add": "Add a set",
+      "remove": "Remove set {n}",
+      "splitAll": "Split the library into sets of {n}",
+      "shuffleSimilar": "Arrange sets so similar palettes sit together",
+      "shuffleContrast": "Arrange sets so neighbours differ in palette",
+      "shuffling": "Comparing palettes…",
+      "shuffled": {
+        "similar": "Sets arranged: similar palettes together",
+        "contrast": "Sets arranged: neighbours differ"
+      },
+      "shuffleFailed": "Could not compare palettes: {message}",
+      "count": "{n} sets",
+      "free": "Not in a set",
+      "groupSimilar": "Group frames that look alike into sets of {n}",
+      "grouping": "Comparing frames…",
+      "grouped": "Grouped into {n} sets by similarity",
+      "groupFailed": "Could not group the frames: {message}",
+      "hide": "Hide set {n} from the animation",
+      "show": "Return set {n} to the animation",
+      "keepOneShown": "At least one set stays in the animation",
+      "hiddenState": "not in the animation",
+      "hideFromBatch": "Do not render set {n}",
+      "showInBatch": "Render set {n} again",
+      "keepOneRendered": "At least one set is rendered",
+      "notRendered": "not rendered"
+    },
+    "order": {
+      "title": "Order and focus",
+      "hint": "The frames play in this order, the numbers are their places on the roll. Drag a frame or use the arrows on hover. Left to right follows the lenses of the camera, right to left flips the motion. Detection compares parallax between frames.",
+      "detect": "Detect order",
+      "reverse": "Reverse order",
+      "apply": "Apply",
+      "detecting": "Detecting the order from parallax…",
+      "confirmed": "Order confirmed · {conf}% confidence | Order confirmed · {conf}% confidence · direction guessed from the first frame",
+      "looksOrder": "Looks like {names} · {conf}% confidence | Looks like {names} · {conf}% confidence · direction guessed",
+      "lowParallax": "Parallax is too small ({px} px), the order could not be detected",
+      "undetermined": "Order not detected: {reason}. Arrange the frames by hand.",
+      "failed": "Could not detect the order: {message}",
+      "applied": "Order applied",
+      "rightToLeft": "Right to left",
+      "leftToRight": "Left to right",
+      "correctAll": "Detect and fix the order in every set",
+      "corrected": "Order corrected to {names} · {conf}% confidence | Order corrected to {names} · {conf}% confidence · direction guessed",
+      "direction": "Direction",
+      "playback": "Playback order",
+      "frameOnRoll": "Frame {n} on the roll",
+      "allSets": "All sets",
+      "allForward": "Every set left to right",
+      "allBackward": "Every set right to left",
+      "alternate": "Alternate: left to right, right to left…",
+      "random": "Random direction for each set"
+    },
+    "hint": {
+      "addFrames": "Add frames from a multi-lens camera roll to begin.",
+      "selectFour": "Select {max} frames in the library ({n} / {max}).",
+      "selectFourInSet": "Select {max} frames for set {set} ({n} / {max}).",
+      "markPoint": "Click the subject that should stay still on any frame. Drag to adjust, arrows move 1 px, Shift moves 10 px.",
+      "markPointInSet": "Click the subject that should stay still on a frame of set {set} ({n} / {max}). It is searched in every set.",
+      "noOverlap": "The frames do not overlap after alignment. Move a point or pick other frames.",
+      "ready": "Check the preview, adjust the output and press Render MP4."
+    },
+    "focus": {
+      "noPoint": "no point",
+      "srcAuto": "auto {score}",
+      "srcManual": "manual",
+      "lowConfidence": "Low confidence, check the point",
+      "canvasLabel": "Frame {n}, click to set the focus point",
+      "searching": "Searching for the point on the other frames…",
+      "found": "Point found on {n} frames",
+      "done": "Done",
+      "allManual": "Every other point is set by hand",
+      "failed": "Auto search failed: {message}",
+      "showLarge": "Show frame {n} large · shown at {zoom}× around the point",
+      "foundLow": "Point found on {n} frames · {low} with low confidence, check them",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "zoomFit": "Fit the frame",
+      "srcCenter": "centre by default"
+    },
+    "adjust": {
+      "title": "Adjust",
+      "hint": "Brightness and contrast run from −100 to +100, sharpen in steps like one Photoshop Sharpen pass each. Applied before alignment, identically in the browser and on the server. Double-click a slider to reset it. The switch and the shared sliders are remembered for each set.",
+      "allFrames": "All frames together",
+      "perFrameHint": "Brightness and contrast are set for each frame under its picture; sharpen applies to the whole set.",
+      "brightness": "Brightness",
+      "contrast": "Contrast",
+      "sharpen": "Sharpen",
+      "resetAll": "Reset adjustments",
+      "resetFrame": "Reset this frame",
+      "dblclickReset": "Double-click to reset",
+      "balance": "Balance exposure across the set",
+      "uneven": "Frames {frames} differ in exposure from the rest.",
+      "balanceNow": "Balance",
+      "balancedHint": "Each frame is balanced automatically; brightness and contrast here apply on top of the balance to the whole set.",
+      "balanceOff": "Turn off auto balance",
+      "less": "Less",
+      "more": "More"
+    },
+    "output": {
+      "modes": {
+        "pingpong": "Ping-pong",
+        "pingpong_hold": "Ping-pong with hold",
+        "forward": "Forward",
+        "backward": "Backward",
+        "ends": "Ends",
+        "middle": "Middle",
+        "custom": "Custom pattern…"
+      },
+      "pattern": "Pattern",
+      "patternPlaceholder": "e.g. 1-2-3-4-4-3-2-1",
+      "patternHint": "Frame numbers 1–{max} separated by dashes, commas or spaces. Repeats hold a frame longer.",
+      "sets": "Sets",
+      "setOrder": "Order of sets",
+      "setModes": {
+        "forward": "In turn",
+        "pingpong": "Ping-pong",
+        "sweep": "One strip: the loop runs through all sets and back"
+      },
+      "sharedFocus": "Sets share one focus point",
+      "sharedFocusHint": "On: the focus object stays in the same place in every set, the background may jump between sets. Off: each set is aligned on its own and the framing stays as shot, so the object may move between sets while the background stays.",
+      "fps": "Speed, fps",
+      "duration": "Duration, s",
+      "presets": {
+        "ig_portrait": "Instagram 4:5 · 1080×1350",
+        "ig_square": "Instagram 1:1 · 1080×1080",
+        "ig_story": "Reels 9:16 · 1080×1920",
+        "ig_landscape": "Instagram 1.91:1 · 1080×566",
+        "free": "No crop · common area",
+        "custom": "Custom frame · drag the corners"
+      },
+      "maxWidth": "Max width",
+      "original": "Original",
+      "loops": "Repeats",
+      "loopsByDuration": "Fill the duration",
+      "loopsExact": "×{n} whole composition",
+      "composition": "Composition",
+      "compositions": {
+        "single": "One after another",
+        "crossfade": "Crossfade between sets",
+        "double": "Double exposure",
+        "split": "Split frame: strips per set",
+        "mosaic": "Mosaic: all sets in a grid",
+        "triptych": "Triptych: sets side by side"
+      },
+      "transitionFrames": "Transition frames",
+      "transitionOption": "+{n}",
+      "parallaxZoom": "Micro-zoom, %",
+      "parallaxZoomHint": "The frame grows slightly with the lens position, from 0% on the first frame to the chosen value on the last, scaled about the focus point. Adds depth to the wiggle.",
+      "fileTitle": "File",
+      "fileHint": "Frame rate, length and size of the MP4. With exact repeats the length follows from the sequence."
+    },
+    "preview": {
+      "label": "Preview, drag to move the crop frame",
+      "needFrames": "Select {max} frames in the library ({n} / {max})",
+      "needFramesInSet": "Select {max} frames for set {set} ({n} / {max})",
+      "needPoints": "Mark the point on every frame ({n} / {max})",
+      "needPointsInSet": "Mark the point in set {set} ({n} / {max})",
+      "noOverlap": "Frames do not overlap, check the points",
+      "info": "Common area {area} px · crop {crop} → output {out} · {frames} frames, {seconds} s",
+      "anchorCenter": "Centred on the focus point",
+      "anchorMoved": "Frame moved by hand",
+      "recenter": "Recentre",
+      "tab": "Preview",
+      "format": "Format",
+      "customHint": "Drag the frame, pull a corner to resize"
+    },
+    "render": {
+      "button": "Render MP4",
+      "rendering": "Rendering…",
+      "done": "Done, the result is below",
+      "failed": "Render failed: {message}",
+      "resultInfo": "Frames {frames} · {size} · {count} frames · {fps} fps · {seconds} s · {mb} MB",
+      "download": "Download MP4",
+      "tab": "Result",
+      "activeSet": "Only set {n}",
+      "activeSetHint": "Render an MP4 of set {n} alone with its own loop"
+    },
+    "reset": {
+      "button": "Start over",
+      "confirm": "Clear all frames, points, settings and results in the studio? Uploaded files stay on the server for 24 hours."
+    },
+    "scenes": {
+      "layout": "Roll layout"
+    },
+    "layout": {
+      "title": "Roll layout",
+      "close": "Close",
+      "startHere": "Start a set here",
+      "hint": "Frames in the order of the roll, the bar below shows the set. Click a frame to open its set, click a free frame to add it to the current set. Scissors start a new set at that frame and rebuild the sets of four after it. Escape closes.",
+      "bySets": "By sets",
+      "byRoll": "By roll",
+      "hintSets": "Each block is one set of {n}. The set name opens it; click a frame to move it into the current set or out of it, click a free frame to add it."
+    },
+    "prepare": {
+      "title": "Preparing your roll",
+      "uploading": "Uploading · {done} / {total}",
+      "grouping": "Grouping frames that look alike…",
+      "ordering": "Checking the frame order · {done} / {total} sets",
+      "cutting": "Cutting the scans into frames…",
+      "shrinking": "Compressing · {done} / {total}"
+    },
+    "outputMode": {
+      "label": "What to make",
+      "combined": "One animation",
+      "separate": "Each set",
+      "combinedHint": "Every shown set goes into one MP4",
+      "separateHint": "A separate MP4 for each shown set: {n} videos in one archive"
+    },
+    "outputChoice": {
+      "title": "The roll has {n} sets. What should they become?",
+      "combined": "One animation from all sets",
+      "combinedHint": "Sets play one after another in a single MP4, with a shared composition",
+      "separate": "A separate MP4 for each set",
+      "separateHint": "{n} videos with the same settings, downloaded as one archive",
+      "later": "You can switch this any time above the frames."
+    },
+    "batch": {
+      "button": "Render {n} MP4",
+      "rendering": "Rendering {done} / {total}…",
+      "starting": "Sending {total} sets to render…",
+      "progress": "Rendered {done} / {total}",
+      "done": "Done: {n} MP4, download them as one archive",
+      "doneWithFailures": "Done: {n} MP4, {failed} failed, hover a set to see why",
+      "cancelled": "Stopped, {n} MP4 are ready",
+      "failed": "The batch stopped with an error, {n} MP4 are ready",
+      "stopping": "Stopping after the current set…",
+      "stop": "Stop",
+      "noOverlap": "Frames of set {set} do not overlap, check its points",
+      "downloadAll": "Download all (zip)",
+      "summary": "Ready {done} / {total}",
+      "pending": "waiting"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "playPause": "Play or pause the preview",
+      "passes": "{n} passes",
+      "repeats": "Repeats",
+      "presetPlaceholder": "Preset",
+      "presets": {
+        "even": "×1 for every set",
+        "edges": "Longer on the edge sets",
+        "swing": "Swing: long on the first set"
+      },
+      "cyclesTitle": "Plays {n} times in a row, click to change",
+      "toggleLoop": "Switch between ping-pong and forward",
+      "seek": "Frame {n}, click to jump here",
+      "ownFile": "A separate MP4"
+    },
+    "loop": {
+      "title": "Loop",
+      "hint": "How the {n} frames of the set play and how many times in a row. Ping-pong loops without a jump, ends give the strongest parallax, middle the softest. The same is editable right on the clip in the timeline: drag frames, click the loop sign or ×N.",
+      "repeats": "Repeats",
+      "applyAll": "Apply to all sets",
+      "sweepNote": "In “One strip” the loop runs through all sets, loops and repeats of single sets do not apply.",
+      "syncedNote": "In simultaneous compositions every set plays the loop of the first set."
+    },
+    "composition": {
+      "title": "Composition",
+      "hint": "How several sets are combined into one video and a little depth on top. Crossfade blends frames at the seams of sets; double exposure, split frame, mosaic and triptych play all sets at once."
+    },
+    "setSize": {
+      "title": "Photos in a set",
+      "option": "{n} photos",
+      "hint": "Every animation is built from {n} photos taken at once: pick the number of lenses of your camera"
+    }
+  },
+  "errors": {
+    "render": {
+      "validation_failed": "The server rejected the request. It may be running an older version, restart it with the current code",
+      "upload": {
+        "unsupported_format": "Unsupported file format: {filename}",
+        "file_too_large": "{filename} is larger than {limitMb} MB",
+        "image_too_big": "{filename} has too many pixels",
+        "unreadable": "Could not read the image {filename}",
+        "library_full": "The library holds at most {limit} frames",
+        "disk_full": "The server is out of space, try again later"
+      },
+      "session": {
+        "not_found": "The session has expired, upload the frames again"
+      },
+      "scan": {
+        "not_found": "Scan {index} was not found"
+      },
+      "frame": {
+        "not_found": "Frame {index} was not found",
+        "indices_out_of_range": "Some frames are missing from the session"
+      },
+      "split": {
+        "no_scans": "Upload scans before cutting them"
+      },
+      "render": {
+        "no_overlap": "Frames do not overlap after alignment, check the focus points",
+        "common_area_too_small": "The common area is too small for this format",
+        "pattern_required": "Enter a frame pattern for the custom loop",
+        "encode_failed": "Video encoding failed on the server",
+        "too_large": "Too many frames for this size: {frames} × {width}×{height}. Lower the width or the number of sets",
+        "split_too_small": "The frames would be too small, enlarge the frame or reduce the gap"
+      },
+      "video": {
+        "not_found": "The video has not been rendered yet"
+      },
+      "batch": {
+        "not_found": "The batch was not found, it may have expired",
+        "not_ready": "The batch has no finished videos yet"
+      }
+    },
+    "network": {
+      "unreachable": "No connection to the server"
+    }
+  }
+}
